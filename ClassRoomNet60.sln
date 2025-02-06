@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassRoomNet60", "ClassRoomNet60\ClassRoomNet60.csproj", "{1F346B5E-758B-4097-B1A1-1621897D1AFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassRoomUnitTesting", "ClassRoomUnitTesting\ClassRoomUnitTesting.csproj", "{EBC7C4A7-48EC-4C6E-B351-90BE746835EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F346B5E-758B-4097-B1A1-1621897D1AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F346B5E-758B-4097-B1A1-1621897D1AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F346B5E-758B-4097-B1A1-1621897D1AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC7C4A7-48EC-4C6E-B351-90BE746835EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC7C4A7-48EC-4C6E-B351-90BE746835EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC7C4A7-48EC-4C6E-B351-90BE746835EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC7C4A7-48EC-4C6E-B351-90BE746835EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,22 +13,21 @@ namespace ClassRoomNet60
         public int MonthOfBirth { get; private set; }
         public int Birthday { get; private set; }
 
-
         public Student(string name, int monthOfBirth, int birthDay) 
-        { 
-            Name = name;
-            MonthOfBirth = monthOfBirth;
-            Birthday = birthDay;
-
+        {
             if (monthOfBirth < 1 || monthOfBirth > 12)
             {
-                throw new InvalidDataException($"The birth month is invalid for new student: {this.Name}");
+                throw new ArgumentOutOfRangeException($"The birth month is invalid for new student: {this.Name}");
             }
 
             if (birthDay < 1 || birthDay > 31)
             {
-                throw new InvalidDataException($"The birthday is invalid for new student: {this.Name}");
+                throw new ArgumentOutOfRangeException($"The birthday is invalid for new student: {this.Name}");
             }
+
+            Name = name;
+            MonthOfBirth = monthOfBirth;
+            Birthday = birthDay;
         }
 
         public string Season()

@@ -13,7 +13,7 @@ public class Program
             c.Students.Add(new Student("Nikolaj", 12, 8));
             c.Students.Add(new Student("Dølle", 3, 12));
             c.Students.Add(new Student("Kasper", 8, 4));
-            c.Students.Add(new Student("Bobby", 12, 31));
+            c.Students.Add(new Student("Bobby", 15, 31));
 
             Console.WriteLine(c.ToString());
             Console.WriteLine(c.SeasonalCounterLinq());
