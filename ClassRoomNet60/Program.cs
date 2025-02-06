@@ -10,6 +10,7 @@ public class Program
         c.Students.Add(new Student("Nikolaj", 12, 8));
         c.Students.Add(new Student("Dølle", 3, 12));
         c.Students.Add(new Student("Kasper", 8, 4));
+        c.Students.Add(new Student("Bobby", 13, 31));
 
         foreach (var student in c.Students)
         {
@@ -17,5 +18,7 @@ public class Program
             Console.WriteLine($"Birthday: {student.Birthday}/{student.MonthOfBirth}");
             Console.WriteLine($"This person is a {student.Season()}");
         }
+
+        c.SeasonalCounterLinq();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,11 @@ namespace ClassRoomNet60
     public class Student
     {
         public string Name { get; private set; }
+
+        [Range(1,12)]
         public int MonthOfBirth { get; private set; }
+
+        [Range(1,31)]
         public int Birthday { get; private set; }
 
         public Student(string name, int monthOfBirth, int birthDay) 
