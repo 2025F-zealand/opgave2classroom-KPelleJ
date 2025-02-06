@@ -11,10 +11,8 @@ namespace ClassRoomNet60
     {
         public string Name { get; private set; }
 
-        [Range(1,12)]
         public int MonthOfBirth { get; private set; }
 
-        [Range(1,31)]
         public int Birthday { get; private set; }
 
         public Student(string name, int monthOfBirth, int birthDay) 
@@ -22,6 +20,16 @@ namespace ClassRoomNet60
             Name = name;
             MonthOfBirth = monthOfBirth;
             Birthday = birthDay;
+
+            if (monthOfBirth < 1 || monthOfBirth > 12)
+            {
+                throw new InvalidDataException($"The birth month is invalid for new student: {this.Name}");
+            }
+
+            if (birthDay < 1 || birthDay > 31)
+            {
+                throw new InvalidDataException($"The birthday is invalid for new student: {this.Name}");
+            }
         }
 
         public string Season()
