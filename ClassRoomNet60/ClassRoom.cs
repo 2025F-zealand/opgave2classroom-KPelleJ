@@ -60,18 +60,36 @@ namespace ClassRoomNet60
             Console.WriteLine($"Fall = {Fall} students");
         }
         
-        public void SeasonalCounterLinq()
+        public string SeasonalCounterLinq()
         {
+            StringBuilder output = new StringBuilder();
             var WinterStudents = Students.Where(x => x.MonthOfBirth == 12 || x.MonthOfBirth == 1 || x.MonthOfBirth == 2);
             var SpringStudents = Students.Where(x => x.MonthOfBirth == 3 || x.MonthOfBirth == 4 || x.MonthOfBirth == 5);
             var SummerStudents = Students.Where(x => x.MonthOfBirth == 6 || x.MonthOfBirth == 7 || x.MonthOfBirth == 8);
             var FallStudents = Students.Where(x => x.MonthOfBirth == 9 || x.MonthOfBirth == 10 || x.MonthOfBirth == 11);
 
-            Console.WriteLine("Students divided by Month of Birth");
-            Console.WriteLine($"Winter students: {WinterStudents.Count()}");
-            Console.WriteLine($"Spring students: {SpringStudents.Count()}");
-            Console.WriteLine($"Summer students: {SummerStudents.Count()}");
-            Console.WriteLine($"Fall students: {FallStudents.Count()}");
+            output.AppendLine("Students divided by Month of Birth");
+            output.AppendLine($"Winter students: {WinterStudents.Count()}");
+            output.AppendLine($"Spring students: {SpringStudents.Count()}");
+            output.AppendLine($"Summer students: {SummerStudents.Count()}");
+            output.AppendLine($"Fall students: {FallStudents.Count()}");
+
+            return output.ToString ();
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder();
+
+            output.AppendLine("Klassens elever:\n___________________");
+            foreach (var student in Students)
+            {
+                output.AppendLine(student.Name);
+                output.AppendLine($"Birthday: {student.Birthday}/{student.MonthOfBirth}");
+                output.AppendLine($"This person is a {student.Season()}\n____________________\n");
+            }
+
+            return output.ToString();
         }
     }
 }
