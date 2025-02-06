@@ -14,6 +14,8 @@ public class Program
         foreach (var student in c.Students)
         {
             Console.WriteLine(student.Name);
+            Console.WriteLine($"Birthday: {student.Birthday}/{student.MonthOfBirth}");
+            Console.WriteLine($"This person is a {student.Season()}");
         }
     }
 }
